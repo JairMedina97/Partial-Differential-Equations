@@ -1,0 +1,140 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{fancyhdr}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\lhead[x1]{FCT}
+%\chead[y1]{Probabilidad}
+\rhead[z1]{Ecuaciones Diferenciales Parciales}
+%\renewcommand{\headrulewidth}{0.5pt}
+%encabezado de pagina par e impar
+
+
+
+%\lfoot[a1]{S}
+%\cfoot[c1]{d2}
+\rfoot[e1]{Jair Medina}
+%\renewcommand{\footrulewidth}{0.5pt}
+%pie de página de par e impar
+
+%aqui definimos el encabezado y pie de pagina de la pagina inicial de un capitulo
+\fancypagestyle{plain}{
+\fancyhead[L]{K1}
+\fancyhead[C]{K2}
+\fancyhead[R]{K3}
+\fancyfoot[L]{L1}
+\fancyfoot[C]{L2}
+\fancyfoot[R]{L3}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+}
+
+\pagestyle{fancy}
+%hasta aquí
+
+
+
+
+
+\begin{document}
+\Large Ecuacion de calor
+\\
+\\ \large{$$\displaystyle \frac{\partial u}{\partial t} = k \frac{\partial ^2 u}{\partial x^2}$$}
+\\ \Large Se supone una barra de longitud L y las siguientes condiciones:
+\\ 1. El flujo de calor solo es en dirección de x
+\\ 2. La barra esta aislada
+\\ 3. No hay generación de calor interno
+\\ 4. Material conductivo homogéneo
+\\ 5. El calor especifico $\gamma$ y la conductividad térmica del material son constantes
+\\
+\\ $$Q= \gamma m u$$
+\\ donde:
+\\ Q razón de calor
+\\ $\gamma$ calor especifico
+\\ m masa
+\\ u temperatura en aumento
+\\ \Large La razón de calor $q_t$ que fluye por la sección transversal y es proporcional al area "A" de la sección y derivado parcial con respecto a $x$ de la temperatura.
+\\$$\displaystyle Q_t = -kAu_x$$
+\\ \Large El calor fluye en dirección de la disminución d temperatura, el signo negativo se añade para asegurar que $Q_t$ es positivo para $u_x<0$ flujo de calor a la derecha y negativo $u_x>0$
+\\Si $\displaystyle \Delta x$ es pequeño entonces  $\displaystyle x, x + \Delta x$
+\\$$\displaystyle m = \rho (A\Delta x)\Leftarrow volumen$$
+\\Añadiendo la ecuación
+\\$$\displaystyle Q = \gamma \rho (A \Delta x) u \rightarrow Q_t = \gamma \rho (A \Delta x) u_t $$
+\newpage
+Cuando el calor fluye de forma positiva
+\\$$\displaystyle Q_t = -kAu_x (x,t) - [-kAu_x(x + \Delta x, t)]= kA[u_x(x + \Delta x, t)-u_x(x,t)]$$
+\\Substituyendo la ecuación
+\\ $$\displaystyle Q_t=kA[u_x(x + \Delta x, t)-u_x(x,t)]$$
+\\Constante de difusividad térmica y diferencias
+\\$$\displaystyle \dfrac{k}{\gamma \rho} \dfrac{u_x(x+ \Delta x,t)-u_x(x,t)}{\Delta x}= u_t$$
+\\difusividad térmica
+\\$$k = \dfrac{K}{\gamma \rho}$$ 
+\\ Notación económica
+\\$$\displaystyle ku_{xx}=u_t $$
+\\ Ecuación de calor en coordenadas rectangulares
+\\\Large $$\displaystyle k\frac{\partial ^2u}{\partial x^2} = \frac{\partial u}{\partial t}$$
+\\ Valores en la frontera
+\\$$\displaystyle 0<x<L, \quad t>0$$
+
+\newpage
+\Large 
+\begin{center}
+\textbf{Ecuación de calor y su derivación}
+\end{center}
+$$\displaystyle u_t=\alpha^2 u_{xx} + f(x,t)$$
+\\El calor es un proceso a tráves del cual se transfiere energía térmica entre los cuerpos.Las partículas de los cuerpos nunca están en reposo pues se encuentren en constante agítación.La Temperatura es un indicador de la energía térmica de los cuerpos. A mayor temperatura, mayor energía y los cuerpos y sistemas pueden intercambiar energía térmica.
+\\$$\includegraphics[scale=1]{imagenA}$$
+\begin{center}
+\small {Fig. 1 Barra que conduce calor}
+\end{center}
+Se supone una barra de longitud L y las siguientes condiciones:
+\\ 1. El flujo de calor solo es en dirección de x
+\\ 2. La barra esta aislada
+\\ 3. Material conductivo homogéneo
+\\ 4. El calor especifico $\gamma$ y la conductividad térmica del material son constantes
+\\\\ \Large  
+\begin{center}
+\textbf {Conservación de calor}
+\end{center} 
+El principio es acerca de la conservación de calor que expresa que en un sistema cerrado (no hay intercambio de calor con otros sistemas) cambia de n estado incial A a otro estado final B, el trabajo realizado no es dependiente del tipo de trabajo ni del proceso.Se aplica el $x , x+\Delta x \,$ Se desea conocer el calor que ha sido generado en la barra.
+\\\\ $$\displaystyle (x,x+ \Delta x) = \int_x^{x+ \Delta x} c \rho A u (s,t) ds $$
+\\  La ecuación es el calor en cantidad generado dentro de la barra,para el conocimiento de esta asunción es necesario relacionar las propiedades fisicas de la barra, donde c es la capacidad termal, $\rho$ es la densidad de la misma y A es la sección transversal, los limites del caso de estudio son $(x, x+\Delta x)$.
+\newpage
+\Large 
+\begin{center}
+\textbf {Ecuacion de la conservación de energia}
+\end{center}
+$$\displaystyle \frac{d}{dt} \int_x^{x+\Delta x} c\rho Au(s,t)ds = c\rho A \int_x^{x+\Delta x} u(s,t)ds$$
+\\El primer término es el cambio de calor de la barra definida por el diferencial con las propiedades fisicas de la barra. El segundo término se refiere a la cantidad de calor que ha sido generada en la barra y las constantes c, $\rho$ y A fuera de la integral.
+\\\\ $$= k A[u_x(x+\Delta x,t)-u_x(x,t)]+A \int_x^{x+\Delta x}f(s,t)ds$$
+\\ La ultima ecuación es el resultado del proceso de integración del segundo término de la pasada y la multiplicación de la capacidad termal $c$ por la densidad $\rho$ dando origen a la nueva constante $k$ que es conductividad termal.
+\begin{center}
+\textbf Teorema del valor medio
+\end{center}
+Es una propiedad de las funciones que se pueden derivar en un intérvalo y esta representado por la siguiente ecuación:
+\\\\ $$\displaystyle \int_b^a f(x)dx = f(xi)(a-b)$$
+\\\\ Aplicando el teorema en la ecuación pasada se tiene:
+\\$$\displaystyle c \rho A u_t (\xi , t) (x + \Delta x - x) = k A [u_x(x + \Delta x, t) - u_x (x , t)]+ A f(\xi ,t)(x + \Delta x - x)$$
+\\$$\displaystyle c \rho A u_t (\xi , t) (\Delta x) = k A [u_x(x + \Delta x, t) - u_x (x , t)]+ A f(\xi ,t)(\Delta x)$$
+\\ Una simplificación de la ecuación se puede obtener así
+\\ $$\displaystyle u_t(\xi , t)= \frac{k}{c \rho}\left[ \dfrac{u_x(x + \Delta x,t)-u_x(x,t)}{\Delta x} \right]+ \dfrac{1}{c \rho} f(\xi , t)$$
+\newpage
+En la ecuación la capacidad termal (c), densidad ($\rho$) y el área de sección transversal (A) se pasan dividiendo al total de calor que se genera y a la fuente de calor externa, así como el ($\Delta x$) dando como resultado la ecuación que se describió.Asignando el valor de $0$ a $\Delta x$ da como resultado el siguiente:
+$$\displaystyle u_t(x,t)=\alpha^2 u_{xx}(x,t)+f(x,t)$$
+\begin{center}
+\textbf{Sustitución de constantes proporcionales}
+\end{center}
+En la nueva ecuación se obtiene que el primer termino $u_t(x,t)$ significa la razón de cambio de temperatura, despues en el segundo término se tiene que la constante $\alpha^2$ es la difusividad, que significa la propagación de calor de la división $\dfrac{k}{c \rho}$.La segunda derivada con respecto x $u_{xx}$ es la concavidad de la pendiente de la temperatura y por último el tercer término es la densidad de la fuente de calor que es de la ecuación $\displaystyle \left(\dfrac{1}{c \rho} \,f(\xi ,t)\right)$, dando como resultado la ecuación de calor vista desde el principio del tema. 
+\\ \Large $$\displaystyle u_t=\alpha^2 u_{xx} + f(x,t)$$
+\\ \textbf {Aplicación}
+\\El calor que puede ser transferido tiene una magnitud y dirección. La tasa de conducción de calor es proporcional al gradiente de temperatura, el cual es el cambio de temperatura por unidad de longitud sea en el sistema cartesiano, cilíndrico o esférico. La conducción de calor en un medio puede ser:
+\\\\ 1. Estado estacionario si la temperatura no cambia con el tiempo.
+\\ 2. Estado transitorio si cambia con respecto al tiempo.
+\end{document}

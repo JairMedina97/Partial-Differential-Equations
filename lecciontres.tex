@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\Large \begin{center}
+ \Large \textbf {Lección 3}
+\end{center} 
+Proposito de la Lección: Demostrar como el flujo de calor y problemas de tipo difusión pueden dar origen a una variedad de condiciones de frontera (CFs) e introducir al concepto importante de flujo.
+\\ Tres importantes tipos de condicion de frontera se discuten a continuación
+\\
+\fbox{\begin{minipage}{30em}
+1. $u=g(t) \;$ (temperatura especificada en la frontera).
+\\ 2. $\displaystyle \frac{\partial u}{\partial n} + \lambda u = g(t) \;$ (temperatura en el medio que rodea es especificada; n es la dirección normal de la frontera).
+\\ 3.$\displaystyle\frac{\partial u}{\partial n} = g(t)$ (calor a traves de una frontera especificada).
+\\\\ Cuando se describen los diferentes tipos de condiciones de frontera que pueden ocurrir para el problema de flujo de calor, tres tipos basicos suceden. Leccion tres habla acerca de ellos y brinda ejemplos de como pueden ocurrir.
+\end{minipage}}
+\begin{center}
+\textbf {Tipo 1 CFs(Temperatura especifica en la frontera)}
+\end{center}
+Considerando el flujo de calor en una barra de una dimensión asilada por los lados y suponga que las fronteras de la barra son las curvas de temperatura $g_1(t)$ y $g_2(t)$
+\\ $$\includegraphics[scale=1.2]{imagen1}$$
+\begin{center}
+{\small fig. 1 temperatura especificada en la frontera}
+\end{center}
+Como se menciona, un sistema que mantiene sus fronteras con temperatura especificas requiere un termostato en cada frontera y sus elementos de calentamiento para ajustar la temperatura acorde.Problemas de CFs de este tipo son muy comun. Muchas veces el propósito del problema es encontrar los valores de temperatura de frontera (control de frontera) $g_1(t)$ y $g_2(t)$ que forzarán a un desempeño. En la industri de acero, Es necesario determinar los controles de frontera para que la temperatura del metal dentro del horno y cambien con respecto al tiempo y al gradiente de temperatura de un punto a otro.
+\newpage
+\begin{center}
+\textbf {Tipo 2 CFs (Temperatura del medio que rodea es especificada)}
+\end{center}
+Suponiendo que de nuevo consideramos nuestra barra de cobre lateralmente aislada, pero ahora requerimos dos fronteras para ser especificadas con temperaturas $g_1(t)$ y $g_2(t)$,Solo tienen contacto con el medio que les rodea. En otras palabras, suponiendo que el lado izquierdo de la barra esta encerrada en un contenedor de liquido que tiene una temperatua $g_1(t)$ mientras que el lado izquierdo esta encerrada con otro liquido y temperatura $g_2(t)$
+\\ $$\includegraphics[scale=1]{imagen2}$$ 
+\begin{center}
+{\small fig. 2 enfriamiento convectivo de las fronteras}
+\end{center}
+Al especificar estos tipos de CFs, No podemos decir que las fronteras de temperatura de la barra van a ser igual como las temperaturas del liquido $g_1(t)$ y $g_2(t)$,Pero si conocemos la ley de enfriamiento de Newton's que siempre que la temperatura de barra en una de las fronteras sea menor que las temperaturas de los liquidos respectivos, por lo tanto el calor va fluir dentro de la barra a una tasa de cambio proporcional a esta diferencia. En otras palabras, para una barra de una dimension las fronteras son $x = 0 $ y $L$. Los estados de la ley de Newton.
+\\\\ Flujo de Calor $
+\left \{ \begin{matrix}
+\displaystyle Flujo \, exterior \, de \,calor \, (en \, x = 0) = h[u(0,t)-g_1(t)] 
+\\
+\displaystyle Flujo\, exterior \, de \,calor \, (en \, x = L) = h[u(L,t)-g_2(t)] 
+\end{matrix} \right. $
+\\\\Donde $h$ es un coeficiente de intercambio de calor, donde su medida es cuantas calorias fluyen a traves de la frontera por unidad de temperatura y su diferencia por segundo por cm y el flujo exterior de calor es el numero de calorias cruzando el final de la barra por segundo. Ecuación ahora puede ser usada en conjunto con lo que se conoce como Ley de Fourier del enfriamiento para allegar a nuestra CF. ley de Fourier da otra representación la cual es de la siguiente manera:
+\\\\
+\fbox{\begin{minipage}{30em}Flujo de calor hacia afuera a traves de un limite es proporcional a la dervida normal hacia adentro a traves del limite
+\end{minipage}}
+\newpage 
+Se concluye que si la temperatura esta incrementando de manera rapida en dirección de la frontera, entonces el calor fluirá de los medios de alrededor dentro de la barra. En nuestro problema de una dimensión, Ley de Fourier expresa:
+\\\\ Flujo de Calor $
+\left \{ \begin{matrix}
+\displaystyle Flujo exterior de calor (en x = 0) = k \frac{\partial u (0,t)}{\partial x}
+\\
+\displaystyle Flujo exterior de calor (en x = L) = -k \frac{\partial u (L,t)}{\partial x} 
+\end{matrix} \right. $
+\\
+$$\includegraphics[scale=1]{imagen3}$$
+\begin{center}
+\small{fig. 3 Ilustración de la ley de Fourier}
+\end{center}
+Donde $k$ es la conductividad térmica del metal, Mide que tan efectivo el material es al conducir calor.(Materiales poco conductivos tienen valores cercanos a cero en unidades cgs. Mientras que cobre y aluminio tienen valores cercanos a uno).
+\\\\
+\fbox{\begin{minipage}{30em}
+Flujo de calor cruzando $x_0$ (de izquierda a derecha) $\displaystyle = -kA\frac{\partial u}{\partial x}(x_0,t)$
+\end{minipage}}
+ 
+
+
+\newpage
+$$\includegraphics[scale=1]{imagen4}$$ 
+\begin{center}
+\small {Fig. 4 Ilustración de la ley de Fourier}
+\end{center} 
+Ley de Fourier dice que si
+$u_x(x_0,t)<0 \;$, entonces el calor fluye de izuiqerda a derecha; si $u_x(x_0,t)>0 \;$, entonces el flujo de calor a traves de $x_0$ será de derecha a izquierda (el calor siempre fluye de altas a bajas temperaturas).
+\\ Finalmente, si usamos las dos expresiones para el flujo de calor, tenemos nuestras CFs y en métodos matemáticos; es,
+\\\\ CF's $
+\left \{ \begin{matrix}
+\displaystyle \frac{\partial u (0,t)}{\partial x} = \frac{h}{k}[u(0,t)-g_1(t)]
+\\
+& 0<t<\infty
+\\
+\displaystyle \frac{\partial u (0,t)}{\partial x} = -\frac{h}{k}[u(L,t)-g_2(t)] 
+\end{matrix} \right. $ 
+\\\\ A frecuencia, la constante $\frac{h}{k}$ simplemente se denota como $\lambda$, y se tienen los valores de CFs que fluyen a traves de la frontera
+\\ $$\displaystyle u_x(0,t) = \lambda [u(0,t)-g_1(t)$$
+\ $$\displaystyle u_x(L,t) = -\lambda [u(L,t)-g_2(t)$$
+\\\\ En dimensiones mayores, tenemos valores similares en las CFs; por ejemplo, si la frontera de un disco circular esta interconectado con un liquido en movimiento que tiene temperatura $g(\theta,t)$, nuestras CFs serian:
+\\\\ $$\displaystyle \frac{\partial u}{\partial r}(R, \theta, t)= - \frac{h}{k}[u(R, \theta, t)-g(\theta ,t)]$$
+\\\\ El termino,$\displaystyle \frac{\partial u}{\partial r}(R, \theta, t)$ Representa la derivada externa normal (en la dirección-r positiva) si $u$ es evaluada en este punto $(R, \theta)$ en la frontera. Este tipo de CFs se llaman CF lineal (pues $u$ y $u_r$ son lineales), no homogéneas debido a su $g(\theta,t)$.
+\\\\
+\\\\ \textbf {Tipo 3 CFs Flujo especificado- incluyendo el caso especial de fronteras aisladas.}
+\\\\ Fronteras aisladas son las que no permiten el paso del flujo de calor y por lo tanto la derivada normal (dentro o fuera) tiene que ser cero en la frontera (desde que la normal es proporcional al flujo). En el caso de la barra de una dimensión con orillas aisladas en $x=0$ y $x=L$, las CFs serian:
+\\\\$$\displaystyle u_x(0,t) = 0 \quad \quad  0<t<
+\infty
+\quad \quad
+u_x(L,t) = 0$$
+\\\\ En dominios de dos dimensiones, una frontera aislada significa que la derivada normal de la temperatura a lo largo de la frontera es cero. Por ejemplo, si el disco circular estuviera aislado en la frontera, entonces la CF seria $u_r(R, \theta, t)=0$ para todo $0< \theta < 2 \pi$ y todo $0<t< \infty$ 
+\\\\Si especificamos la cantidad de calor que entra a lo largo de la frontera del disco, la CF es 
+\\ $$u_r(R , \theta, t)= f(\theta, t)$$
+\\ donde $f(\theta, t)$ representa la cantidad de calor cruzando dentro del disco circular de una fuente externa de calentamiento.
+\\ \Large Jair Josue Medina Ortiz 1792351 
+\end{document}
