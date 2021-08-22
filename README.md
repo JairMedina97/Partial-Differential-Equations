@@ -17,7 +17,7 @@ This repository is disorganized at a certain extension but the .m and .tex codes
 ### - Finite difference method solution in matlab.
 <div align="center"><img src="Images/pic4.PNG" width="400" >
   
-### - Fourier series plot.
+<div align="left"> ### - Fourier series plot.
 <div align="center"><img src="Images/pic5.PNG" width="400" >
   
 ### - Gauss Seidel numerical method with variable number of iterations and constant frontier border .
