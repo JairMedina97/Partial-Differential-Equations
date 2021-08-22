@@ -12,4 +12,17 @@ This repository is disorganized at a certain extension but the .m and .tex codes
 ### - You will find some PDE lectures as well that explains the theory in spanish.
 <div align="center"><img src="Images/pic3.PNG" width="400" >
   
-The matlab files contains as well some numerical methods that solve Differential Equations common problems.
+<div align="left">The matlab files contains as well some numerical methods that solve Differential Equations common problems.
+  
+### - Finite difference method solution in matlab.
+<div align="center"><img src="Images/pic4.PNG" width="400" >
+  
+### - Fourier series plot.
+<div align="center"><img src="Images/pic5.PNG" width="400" >
+  
+### - Gauss Seidel numerical method with variable number of iterations and constant frontier border .
+<div align="center"><img src="Images/pic6.PNG" width="400" >
+  
+  
+  
+  
